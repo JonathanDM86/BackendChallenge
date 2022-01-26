@@ -1,0 +1,3 @@
+user: u_challenge
+password:Ch4llengE#22
+db:db_challenge
