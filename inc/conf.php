@@ -1,0 +1,64 @@
+<?php
+
+/*
+ * Archivo de configuracion para variables generales
+ * y acceso a la base de datos 
+ */
+define("DB_HOST","localhost");
+define("DB_USERNAME","u_challenge");
+define("DB_PASSWORD","Ch4llengE#22");
+define("DB_DATABASE_NAME","db_challenge");
+define("TABLE_USER","t_users");
+
+$routes=[
+    'user'=>array(
+        'add'=>[
+            'method'=>'GET',
+            'route'=>'addAction',
+            'auth'=>false
+        ],
+        'delete'=>[
+            'method'=>'POST',
+            'route'=>'deleteAction',
+            'auth'=>true
+        ],
+        'update'=>[
+            'method'=>'POST',
+            'route'=>'updateAction',
+            'auth'=>true
+        ],
+        'import'=>[
+            'method'=>'GET',
+            'route'=>'importAction',
+            'auth'=>false
+        ]
+    ),
+    'relationships'=>array(
+        'add'=>[
+            'method'=>'POST',
+            'route'=>'addAction',
+            'auth'=>true
+        ],
+        'delete'=>[
+            'method'=>'POST',
+            'route'=>'deleteAction',
+            'auth'=>true
+        ],
+        'list'=>[
+            'method'=>'GET',
+            'route'=>'listAction',
+            'auth'=>false
+        ],
+        'random'=>[
+            'method'=>'POST',
+            'route'=>'randomAction',
+            'auth'=>true
+        ],
+        'update'=>[
+            'method'=>'GET',
+            'route'=>'updateBadges',
+            'auth'=>false
+        ]
+    )
+];
+$secretWord='JgDm86#';
